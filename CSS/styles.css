@@ -1,0 +1,120 @@
+body {
+    height: 100vw;
+    width: 100vw;
+    margin: 0;
+    /* //background-color: #0C164D; */
+    background-image: linear-gradient(to right, #0C164D, #190B22);
+}
+.wrapper-first-side {
+display: flex;
+
+}
+
+#sun {
+    background-color: #FFD029;
+    height: 100vh;
+    width: 150px;
+    border-bottom-right-radius: 80%;
+    border-top-right-radius: 80%;
+    filter: drop-shadow(20%);
+}
+
+#wrapper-text-and-planets {
+width: 100vw;
+display: flex;
+align-items: end;
+flex-direction: column;
+}
+
+#header-text {
+    margin: 35px;
+    text-align: end;
+
+}
+.heading-h1 {
+    color: #FFFFFF;
+    font-size: 65px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-family: secular one;
+}
+
+.heading-h2 {
+    color: #FFD029;
+    font-family: lora;
+    font-size: 24px;
+   
+}
+
+#planets {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 870px;
+    margin-right: 40px;
+    margin-left: 40px;
+
+}
+
+#mercuru {
+    background-color: #888888;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+}
+
+#venus {
+    background-color: #E7CDCD;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+}
+
+#earth {
+    background-color: #428ED4;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+}
+
+#mars {
+    background-color: #EF5F5F;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+}
+
+#jupiter {
+    background-color: #E29468;
+    width: 188px;
+    height: 188px;
+    border-radius: 50%;
+}
+
+#saturn {
+    background-color: #C7AA72;
+    width: 144px;
+    height: 144px;
+    border-radius: 50%;
+}
+
+#uranius {
+    background-color: rgb(171, 183, 241);
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+}
+
+#neptune {
+    background-color: #C9D4F1;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+}
+#zocom-first-side {
+color: white;
+margin-top: auto;
+margin-bottom: 45px;
+align-self: center;
+}
