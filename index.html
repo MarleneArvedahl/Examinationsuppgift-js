@@ -1,43 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="CSS/styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap"
+            rel="stylesheet"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
-</head>
-
-<body>
-    <section class="wrapper-first-side">
-        <div id="sun"></div>
-        <section id="wrapper-text-and-planets">
-        <section id="header-text">
-            <h1 class="heading-h1">SOLSYSTEMET</h1>
-            <h2 class="heading-h2">Solaris</h2>
-        </section>
-        <section id="planets">
-            <div id="mercuru"></div>
-            <div id="venus"></div>
-            <div id="earth"></div>
-            <div id="mars"></div>
-            <div id="jupiter"></div>
-            <div id="saturn"></div>
-            <div id="uranius"></div>
-            <div id="neptune"></div>
-        </section>
-        <footer id="zocom-first-side">ZOCOM</footer>
-    </section>
+    <body>
+        <div class="wrapper-first-side">
+            <section id="wrapper-text-and-planets">
+                <section id="header-text">
+                    <h1 class="heading-h1">SOLSYSTEMET</h1>
+                    <h2 class="heading-h2">Solaris</h2>
+                </section>
+                <section id="planets">
+                    <div id="sun"></div>
+                    <div id="mercuru"></div>
+                    <div id="venus"></div>
+                    <div id="earth"></div>
+                    <div id="mars"></div>
+                    <div id="jupiter"></div>
+                    <div id="saturn"></div>
+                    <div id="uranius"></div>
+                    <div id="neptune"></div>
+                </section>
+                <footer id="zocom-first-side">ZOCOM</footer>
+            </section>
+        </div>
+        <div class="wrapper-info-side" id="overlay">
+            <h1 class="planet-name" id="name"></h1>
+            <h2 class="latin-name" id="latinName"></h2>
+            <p id="desc"></p>
+            <section class="chart-text">
+                <div>
+                    <h3 class="info-side___h3">Omkrets</h3>
+                    <p id="circumference"></p>
+                </div>
+                <div>
+                    <h3 class="info-side___h3">Km från solen</h3>
+                    <p id="distance"></p>
+                </div>
+                <div>
+                    <h3 class="info-side___h3">Max-temperatur</h3>
+                    <p id="maxTemp"></p>
+                </div>
+                <div>
+                    <h3 class="info-side___h3">Min-temperatur</h3>
+                    <p id="minTemp"></p>
+                </div>
+            </section>
+            <div>
+                <h3 class="info-side___h3">Månar</h3>
+                <p id="moons"></p>
+            </div>
+        </div>
 
         <script src="JS/index.js"></script>
-    </section>
-</body>
-
+    </body>
 </html>

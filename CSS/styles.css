@@ -2,28 +2,20 @@ body {
     height: 100vw;
     width: 100vw;
     margin: 0;
-    /* //background-color: #0C164D; */
     background-image: linear-gradient(to right, #0C164D, #190B22);
 }
+
 .wrapper-first-side {
-display: flex;
+    display: flex;
 
 }
 
-#sun {
-    background-color: #FFD029;
-    height: 100vh;
-    width: 150px;
-    border-bottom-right-radius: 80%;
-    border-top-right-radius: 80%;
-    filter: drop-shadow(20%);
-}
 
 #wrapper-text-and-planets {
-width: 100vw;
-display: flex;
-align-items: end;
-flex-direction: column;
+    width: 100vw;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
 }
 
 #header-text {
@@ -31,6 +23,7 @@ flex-direction: column;
     text-align: end;
 
 }
+
 .heading-h1 {
     color: #FFFFFF;
     font-size: 65px;
@@ -44,7 +37,7 @@ flex-direction: column;
     color: #FFD029;
     font-family: lora;
     font-size: 24px;
-   
+
 }
 
 #planets {
@@ -55,6 +48,15 @@ flex-direction: column;
     margin-right: 40px;
     margin-left: 40px;
 
+}
+
+#sun {
+    background-color: #FFD029;
+    height: 800px;
+    width: 800px;
+   border-radius: 50%;
+   position: absolute;
+   left: -680px;
 }
 
 #mercuru {
@@ -112,9 +114,10 @@ flex-direction: column;
     height: 66px;
     border-radius: 50%;
 }
+
 #zocom-first-side {
-color: white;
-margin-top: auto;
-margin-bottom: 45px;
-align-self: center;
+    color: white;
+    margin-top: auto;
+    margin-bottom: 45px;
+    align-self: center;
 }
