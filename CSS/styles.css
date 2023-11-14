@@ -6,10 +6,12 @@ body {
 }
 
 .wrapper-first-side {
-    display: flex;
-
+    display: none;
 }
 
+.wrapper-first-side.show {
+    display: flex;
+}
 
 #wrapper-text-and-planets {
     width: 100vw;
@@ -21,7 +23,6 @@ body {
 #header-text {
     margin: 35px;
     text-align: end;
-
 }
 
 .heading-h1 {
@@ -57,6 +58,9 @@ body {
    border-radius: 50%;
    position: absolute;
    left: -680px;
+   box-shadow: 0 0 30px 20px rgba(244, 172, 15, .4);
+   
+   
 }
 
 #mercuru {
@@ -120,4 +124,103 @@ body {
     margin-top: auto;
     margin-bottom: 45px;
     align-self: center;
+    justify-content: end;
+    margin-top: auto;
 }
+
+/* ------------------------ OVERLAY -------------------------- */
+
+#overlay {
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right, #0C164D, #190B22);
+}
+
+#overlay.show {
+    display: flex;
+}
+
+.wrapper-info-side {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+.planet-name {
+    color: #FFFFFF;
+    font-size: 60px;
+    font-family: secular one;
+    margin: 0;
+}
+
+.latin-name {
+    color: #FFD029;
+    font-size: 24px;
+    margin-top: 10px;
+    font-family: lora;
+}
+
+.info-side___h3 {
+    color: #FFFFFF;
+    font-family: secular one;
+    margin-top: 0;
+}
+
+.info-side___p{
+    color: #FFFFFF;
+    font-family: Roboto Condensed;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.info-about-planets {
+    padding: 1rem 0;
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.info-about-planets h3 {
+    text-align: left;
+    
+}
+
+.chart-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.wrapper-of-two {
+    display: flex;
+    width: 100%;
+    margin: 0;
+}
+
+#border-box {
+    border-top: solid 1px white;
+    
+}
+.wrapper-of-one {
+    width: 100%;
+    border-top: solid 1px white;
+    padding-top: 30px;
+    
+}
+
+button {
+    font-family: secular one;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+

@@ -18,10 +18,16 @@
             href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap"
             rel="stylesheet"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100&display=swap"
+            rel="stylesheet"
+        />
     </head>
 
     <body>
-        <div class="wrapper-first-side">
+        <div class="wrapper-first-side show">
             <section id="wrapper-text-and-planets">
                 <section id="header-text">
                     <h1 class="heading-h1">SOLSYSTEMET</h1>
@@ -41,32 +47,40 @@
                 <footer id="zocom-first-side">ZOCOM</footer>
             </section>
         </div>
-        <div class="wrapper-info-side" id="overlay">
-            <h1 class="planet-name" id="name"></h1>
-            <h2 class="latin-name" id="latinName"></h2>
-            <p id="desc"></p>
-            <section class="chart-text">
-                <div>
-                    <h3 class="info-side___h3">Omkrets</h3>
-                    <p id="circumference"></p>
-                </div>
-                <div>
-                    <h3 class="info-side___h3">Km från solen</h3>
-                    <p id="distance"></p>
-                </div>
-                <div>
-                    <h3 class="info-side___h3">Max-temperatur</h3>
-                    <p id="maxTemp"></p>
-                </div>
-                <div>
-                    <h3 class="info-side___h3">Min-temperatur</h3>
-                    <p id="minTemp"></p>
-                </div>
+        <div id="overlay">
+            <section class="wrapper-info-side">
+                <h1 class="planet-name" id="name"></h1>
+                <h2 class="latin-name" id="latinName"></h2>
+                <p class="info-side___p" id="desc"></p>
+                <section class="chart-text">
+                    <article class="wrapper-of-two" id="border-box">
+                        <article class="info-about-planets">
+                            <h3 class="info-side___h3">OMKRETS</h3>
+                            <p class="info-side___p" id="circumference"></p>
+                        </article>
+                        <article class="info-about-planets">
+                            <h3 class="info-side___h3">KM FRÅN SOLEN</h3>
+                            <p class="info-side___p" id="distance"></p>
+                        </article>
+                    </article>
+                    <article class="wrapper-of-two">
+                        <article class="info-about-planets">
+                            <h3 class="info-side___h3">MAX-TEMPERATUR</h3>
+                            <p class="info-side___p" id="maxTemp"></p>
+                        </article>
+                        <article class="info-about-planets">
+                            <h3 class="info-side___h3">MIN-TEMPERATUR</h3>
+                            <p class="info-side___p" id="minTemp"></p>
+                        </article>
+                    </article>
+
+                    <article class="wrapper-of-one">
+                        <h3 class="info-side___h3">MÅNAR</h3>
+                        <p class="info-side___p" id="moons"></p>
+                    </article>
+                </section>
+                <button>Tillbaka till rymden</button>
             </section>
-            <div>
-                <h3 class="info-side___h3">Månar</h3>
-                <p id="moons"></p>
-            </div>
         </div>
 
         <script src="JS/index.js"></script>
