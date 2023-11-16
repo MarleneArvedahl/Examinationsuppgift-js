@@ -1,19 +1,11 @@
+
 const sunElem = document.querySelector("#sun");
-// const mercuruElem = document.querySelector('#mercuru');
-// const venusElem = document.querySelector('#venus');
-// const earthElem = document.querySelector('#earth');
-// const marsElem = document.querySelector('#mars');
-// const jupiterElem = document.querySelector('#jupiter');
-// const saturnElem = document.querySelector('#saturn');
-// const uraniusElem = document.querySelector('#uranius');
-// const neptuneElem = document.querySelector('#neptune');
 const planetsElem = document.querySelector("#planets");
 
 
 const BASE_URL = "https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com/";
-// const API_KEY = 'solaris-1Cqgm3S6nlMechWO'; // för godkänt nyckel
 
-//hämtar nyckeln och lägger den i en variabel
+//hämtar nyckeln och lägger den i en variabel, "key".
 async function getKey() {
     let response = await fetch(
         "https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com/keys",
@@ -25,7 +17,7 @@ async function getKey() {
     return data.key;
 }
 
-//hämtar alla planeter och solen
+//hämtar alla planeter och solen med hjälp av nyckeln jag frågat om. 
 async function getBodies() {
     const myKey = await getKey();
     console.log(myKey);
@@ -41,8 +33,9 @@ async function getBodies() {
     return data.bodies;
 }
 
+//denna funktionen skriver ut all data jag eftersökt i mina element. Klick-eventet ligger på min knapp som tar en tillbaka till planeternas sida.
+//Samtidigt som man klickar tar man bort klassen show på overlayen så att min första sida kan visas igen.
 function addInfo(bodyID, data) {
-    console.log(`Add info to ${bodyID}`, data);
     document.querySelector("#name").innerHTML = data.name;
     document.querySelector("#latinName").innerHTML = data.latinName;
     document.querySelector("#desc").innerHTML = data.desc;
@@ -51,13 +44,12 @@ function addInfo(bodyID, data) {
     document.querySelector("#maxTemp").innerHTML = data.temp.day;
     document.querySelector("#minTemp").innerHTML = data.temp.night;
     document.querySelector("#moons").innerHTML = data.moons.join("   ");
-    document.querySelector("button").addEventListener('click', () => {
-      console.log('du klickade på knappen');
 
-      document.querySelector("#overlay").classList.remove("show");
+    document.querySelector("button").addEventListener('click', () => {
+    document.querySelector("#overlay").classList.remove("show");
     });
 }
-
+//visar vilken position/id i arrayen planeterna ligger på.
 const bodyElementIdToIndex = {
     sun: 0,
     mercuru: 1,
@@ -70,12 +62,12 @@ const bodyElementIdToIndex = {
     neptune: 8,
 };
 
-//async loadData gör att den väntar på att planeterna kommit, nästa -ett klickevent där koden hittar mina specifika planeter med hjälp av id.
+//async loadData gör att den väntar på att planeterna kommit och sparar planeterna i variabeln bodies, nästa -ett klickevent där koden hittar mina specifika planeter med hjälp av id.
+//När man klickar på en planet hittar datorn min "overlay" och adderar klassen "show". Sen körs funktionen addInfo.
 async function loadData() {
     const bodies = await getBodies();
 
     planetsElem.addEventListener('click', (event) => {
-        console.log("planeten klickar", event.target.id);
         const index = bodyElementIdToIndex[event.target.id];
         const planet = bodies[index];
         document.querySelector("#overlay").classList.add("show");
